@@ -1,0 +1,8 @@
+body > .app-container {
+  background-image: url("https://timedotcom.files.wordpress.com/2014/09/lb111-men-on-beam-hats-off-copy.jpg?quality=85");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: calc(100%);
+}

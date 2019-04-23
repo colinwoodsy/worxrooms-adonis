@@ -1,0 +1,57 @@
+@layout('layouts/base')
+
+@section('head-title-keywords')
+<meta name="description" content="Worxrooms - About" />
+<meta name="keywords" content="Worxrooms, about" />
+<title>WorXrooms - About </title>
+@endsection
+
+@section('page-css')
+<style type="text/css">
+.feature-banner {
+    background-image: url('https://www.homestay.com/assets/about_us/banner-3d715afd15f94be5f116caf9ea928cbf.jpg');
+}
+.feature-banner {
+    background-color: #6d635f;
+    background-repeat: no-repeat;
+    background-position: 65%;
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-shadow: 0 0.04em 0.8em rgba(0,0,0,0.5);
+    min-height: 160px;
+}
+</style>
+@endsection
+
+@section('navbar')
+@loggedIn
+@include('partials.navbar-jobseeker')
+@else
+@include('partials.navbar-guest')
+@endloggedIn
+@endsection
+
+@section('content')
+<div class="feature-banner large"><div class="container"><p>&nbsp;</p></div></div>
+<div class="container mt-5 pt-5">
+  <h1>About</h1>
+  <section>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, unde magnam, id eveniet, quasi perferendis expedita cumque inventore provident consequuntur enim sint voluptate modi ut quidem? Modi repudiandae optio incidunt.Expedita quod nesciunt excepturi, autem quo amet tempora sapiente aliquid asperiores numquam dolorem eos? At odio mollitia sunt laboriosam sapiente aliquid tenetur, suscipit magnam asperiores temporibus accusamus officia exercitationem ex!
+    </p>
+    <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente voluptatum, saepe adipisci debitis ullam voluptas dolor, harum reiciendis totam cumque! Consequatur, culpa pariatur possimus dolorem quidem illo fugit beatae.
+    </p>
+  </section>
+  <section>
+    <h3>Subheading</h3>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, unde magnam, id eveniet, quasi perferendis expedita cumque inventore provident consequuntur enim sint voluptate modi ut quidem? Modi repudiandae optio incidunt.Expedita quod nesciunt excepturi, autem quo amet tempora sapiente aliquid asperiores numquam dolorem eos? At odio mollitia sunt laboriosam sapiente aliquid tenetur, suscipit magnam asperiores temporibus accusamus officia exercitationem ex!
+    </p>
+    <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente voluptatum, saepe adipisci debitis ullam voluptas dolor, harum reiciendis totam cumque! Consequatur, culpa pariatur possimus dolorem quidem illo fugit beatae.
+    </p>
+  </section>
+</div>
+@endsection

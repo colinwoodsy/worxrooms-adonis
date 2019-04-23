@@ -1,0 +1,49 @@
+@layout('layouts/base')
+
+@section('head-title-keywords')
+<meta name="description" content="Worxrooms - Signin" />
+<meta name="keywords" content="Worxrooms, Signin" />
+<title>WorXrooms - About </title>
+@endsection
+
+@section('page-css')
+<style type="text/css">
+
+</style>
+@endsection
+
+@section('navbar')
+@loggedIn
+@include('partials.navbar-jobseeker')
+@else
+@include('partials.navbar-guest')
+@endloggedIn
+@endsection
+
+@section('content')
+<div class="container mt-5 pt-5">
+
+  <div class="d-flex justify-content-center h-100">
+    <div class="card card-login bg-white">
+      <div class="card-header">
+        <h3>Sign Up</h3>
+      </div>
+      <div class="card-body">
+        <p>Please select whether you are a jobseeker or a host</p>
+        <form>
+          <div class="form-group">
+            <a class="btn btn-block btn-primary text-white btn-primary" href="/sign-up/jobseeker">
+              Jobseeker
+            </a>
+          </div>
+          <div class="form-group">
+              <a class="btn btn-block btn-primary text-white btn-secondary" href="/sign-up/host">
+                Host
+              </a>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+@endsection

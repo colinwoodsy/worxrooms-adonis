@@ -1,0 +1,81 @@
+@layout('layouts/base')
+
+@section('head-title-keywords')
+<meta name="description" content="Worxrooms - Signin" />
+<meta name="keywords" content="Worxrooms, Signin" />
+<title>WorXrooms - About </title>
+@endsection
+
+@section('page-css')
+<style type="text/css">
+.card-login {
+  min-width: 380px;
+}
+</style>
+@endsection
+
+@section('navbar')
+@loggedIn
+@include('partials.navbar-jobseeker')
+@else
+@include('partials.navbar-guest')
+@endloggedIn
+@endsection
+
+@section('content')
+<div class="container mt-5 pt-5">
+
+  {{--  https://startbootstrap.com/snippets/login/  --}}
+  {{--  https://getbootstrap.com/docs/4.0/examples/sign-in/  --}}
+  {{--  https://bootsnipp.com/snippets/vl4R7  --}}
+
+
+  <div class="d-flex justify-content-center h-100">
+    <div class="card card-login bg-white">
+      <div class="card-header">
+        <h3>Sign In</h3>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control" placeholder="username">
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-key"></i>
+              </span>
+            </div>
+            <input type="password" class="form-control" placeholder="password">
+          </div>
+          <div class="form-group">
+            <input type="checkbox"> Remember Me
+          </div>
+          <div class="form-group">
+            {{--  <input type="submit" value="Login" class="btn float-right login_btn btn-primary">  --}}
+            <a class="btn float-right login_btn btn-primary text-white mx-2 btn-primary" href="#sign-up">
+              Sign-in
+              <i class="fa fa-sign-in ml-1" aria-hidden="true"></i>
+            </a>
+
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Don't have an account? &nbsp;
+          <a href="/sign-up">Sign Up</a>
+        </div>
+        <div class="d-flex justify-content-center">
+          {{--  <a href="#">Forgot your password?</a>  --}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@endsection

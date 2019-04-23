@@ -1,0 +1,195 @@
+@layout('layouts/base')
+
+@section('head-title-keywords')
+<meta name="description" content="Worxrooms - Home" />
+<meta name="keywords" content="Worxrooms, Home" />
+<title>WorXrooms - Home </title>
+@endsection
+
+@section('page-css')
+{{ style('css/pages/home') }}
+@endsection
+
+
+@section('page-js')
+{{ script('js/navbar-ontop') }}
+@endsection
+
+!@section('navbar')
+
+@section('content')
+
+<!-- Cover -->
+<div class="pt-5 bg-primary">
+    <div class="container mt-5 pt-5">
+      <div class="row">
+        <div class="col-md-6 my-5 text-lg-left text-center align-self-center">
+          <h1 class="display-4">
+            <span style="font-weight: 500;">WORX</span><span>ROOMS</span>
+          </h1>
+          <p class="lead">Search job vacancies and accomodation</p>
+          <div class="row mt-5">
+            <!--
+              <div class="col-6 col-lg-5"> <a href="#">
+                  <img class="center-block img-fluid d-block shadowed" src="assets/app/download_android.png"> </a> </div>
+              <div class="col-6 col-lg-5"> <a href="#">
+                  <img class="center-block img-fluid d-block shadowed" src="assets/app/download_ios.png"> </a> </div>
+            -->
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card text-dark bg-white" style="width: 22rem;">
+            <div class="card-body">
+              <h5 class="card-title">Find Jobs</h5>
+              <p class="card-text">
+                Search jobs best suited to your skills
+              </p>
+            </div>
+            <div class="card-body">
+              <form role="form">
+                <div class="form-group">
+                  <label for="inputUsernameEmail">What?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputUsernameEmail"
+                    placeholder="Job Description or Skill"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">Where?</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPassword"
+                    placeholder="Enter Postcode"
+                  />
+                </div>
+                <!--
+                  <div class="checkbox pull-right">
+                    <label>
+                      <input type="checkbox">
+                      Remember me </label>
+                  </div>
+                -->
+                <button type="submit" class="btn btn-block btn-primary">
+                  Search
+                </button>
+              </form>
+            </div>
+            <div class="card-body">
+              <a href="#" class="card-link"
+                >Search by accomodation instead?</a
+              >
+              <!-- <a href="#" class="card-link">Another link</a> -->
+            </div>
+          </div>
+          <!--
+            <img class="img-fluid d-block mx-auto" src="assets/app/iphone_cover_light.png" width="400">
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Article style section -->
+  <div class="py-5">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-md-5 order-2 order-md-1">
+          <img
+            class="img-fluid d-block my-3 mx-auto animate-in-left"
+            src="/img/active-adults-bars-583392.jpg"
+            width="270"
+          />
+        </div>
+        <div
+          class="col-md-7 align-self-center order-1 order-md-2 my-3 text-md-left text-center"
+        >
+          <h2>Jobseekers</h2>
+          <p class="my-4 text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+          </p>
+          <a class="btn btn-outline-primary" href="#features">Learn more</a>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div class="align-self-center col-lg-7 text-md-left text-center">
+          <h2>Landlords</h2>
+          <p class="my-4 text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi t aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a class="btn btn-primary shadowed" href="#download">More Info</a>
+        </div>
+        <div class="align-self-center mt-5 col-lg-5">
+          <img
+            class="img-fluid d-block animate-inright"
+            src="img/bed-bedroom-book-916337.jpg"
+            width="270"
+          />
+        </div>
+      </div>
+      <hr class="mt-0" />
+    </div>
+  </div>
+  <!-- Features -->
+  <div class="py-5" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="pb-4">Features</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="align-self-center text-md-right text-center col-lg-4 col-md-6"
+        >
+          <h4 class="text-primary">Ratings System</h4>
+          <p class="mb-5">
+            Workers and Landlord get rated with feedback provided
+          </p>
+          <h4 class="text-primary">Alerts</h4>
+          <p class="mb-5">Receive alerts to your inbox/SMS.</p>
+          <h4 class="text-primary">Connect</h4>
+          <p class="mb-5">
+            In-app chat panel 24/7 active. <br />The support you need, right
+            there.
+          </p>
+        </div>
+        <div class="my-3 col-md-4 d-none d-lg-block">
+          <img
+            class="img-fluid d-block mx-auto animate-indown"
+            src="img/arts-and-crafts-carpenter-carpentry-1972569.jpg"
+            width="300"
+          />
+        </div>
+        <div
+          class="align-self-center text-md-left text-center col-lg-4 col-md-6"
+        >
+          <h4 class="text-primary">Employee Support</h4>
+          <p class="mb-5">
+            All employees are supported with their applications
+          </p>
+          <h4 class="text-primary">Landlords insurance</h4>
+          <p class="mb-5">andlords must have the relevant insurance</p>
+          <h4 class="text-primary">Share the love</h4>
+          <p class="mb-5">
+            Help us spreading the word. <br />Tell your friends with just
+            one-click
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+@endsection

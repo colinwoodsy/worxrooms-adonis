@@ -1,0 +1,94 @@
+@layout('layouts/base')
+
+@section('head-title-keywords')
+<meta name="description" content="Worxrooms - Signup" />
+<meta name="keywords" content="Worxrooms, Signup" />
+<title>WorXrooms - Sign up as Host </title>
+@endsection
+
+@section('page-css')
+<style type="text/css">
+.card-signup {
+  min-width: 380px;
+}
+</style>
+@endsection
+
+@section('navbar')
+@loggedIn
+@include('partials.navbar-jobseeker')
+@else
+@include('partials.navbar-guest')
+@endloggedIn
+@endsection
+
+@section('content')
+<div class="container mt-5 pt-5">
+
+  {{--  https://startbootstrap.com/snippets/login/  --}}
+  {{--  https://getbootstrap.com/docs/4.0/examples/sign-in/  --}}
+  {{--  https://bootsnipp.com/snippets/vl4R7  --}}
+
+  <div class="d-flex justify-content-center h-100">
+
+    <div class="card card-signup bg-white">
+      <article class="card-body mx-auto" style="max-width: 400px;">
+        <h4 class="card-title my-3 text-center">Host - Sign Up</h4>
+        <!--<p class="text-center">Get started with your free account</p>
+        <p>
+          <a href="" class="btn btn-block btn-twitter"> <i class="fa fa-twitter"></i>   Login via Twitter</a>
+          <a href="" class="btn btn-block btn-facebook"> <i class="fa fa-facebook-f"></i>   Login via facebook</a>
+        </p>
+        <p class="divider-text">
+          <span class="bg-light">OR</span>
+        </p>-->
+        <form>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+           </div>
+              <input name="" class="form-control" placeholder="Full name" type="text">
+          </div> <!-- form-group// -->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+           </div>
+              <input name="" class="form-control" placeholder="Email address" type="email">
+          </div> <!-- form-group// -->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+            </div>
+            {{--  https://gist.github.com/andyj/7108917  --}}
+            <input name="" style="max-width: 80px;" class="form-control" placeholder="+44" type="number" max="999">
+            <input name="" class="form-control" placeholder="Phone number" type="text">
+          </div> <!-- form-group// -->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+          </div>
+          <input name="" class="form-control" placeholder="Address" type="text">
+        </div> <!-- form-group end.// -->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+              <input class="form-control" placeholder="Create password" type="password">
+          </div> <!-- form-group// -->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+              <input class="form-control" placeholder="Repeat password" type="password">
+          </div> <!-- form-group// -->
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+          </div> <!-- form-group// -->
+          <p class="text-center">Have an account? <a href="/sign-in">Log In</a> </p>
+      </form>
+      </article>
+    </div> <!-- card.// -->
+
+  </div>
+</div>
+@endsection
