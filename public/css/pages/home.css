@@ -1,8 +1,30 @@
-body > .app-container {
+/* body > .app-container {
   background-image: url("https://timedotcom.files.wordpress.com/2014/09/lb111-men-on-beam-hats-off-copy.jpg?quality=85");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   height: calc(100%);
+} */
+.carousel, .carousel-item, .carousel-inner {
+  /* position: relative; */
+  height: 100%;
+}
+body .carousel .carousel-item img {
+  /* height: calc(100% - 90px); */
+  height: 100%;
+}
+body .carousel .carousel-caption {
+  padding-top: 270px;
+  padding-bottom: 100px;
+  top: 0px;
+  bottom: 0px;
+  background: linear-gradient(rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%);
+}
+.carousel-caption h2 {
+  font-size: 4rem;
+  margin: auto;
+}
+.carousel-caption p {
+  font-size: 1.5rem;
 }

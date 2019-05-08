@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Worxrooms - Listings" />
+    <meta name="keywords" content="Worxrooms, Listings" />
+    <title>WorXrooms - Listings </title>
+
+    <!-- CSS dependencies -->
+    {{ style('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css') }}
+    {{ style('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}
+    {{ style('https://unpkg.com/leaflet@1.4.0/dist/leaflet.css') }}
+    {{ style('css/aquamarine') }} <!-- CSS Theme -->
+    {{ style('css/app') }} <!-- Main CSS -->
+
+    <!-- placeholder for page specific css -->
+    <style type="text/css">
+      html,body {
+        height: 100%;
+      }
+      #yellow {
+        background-color: #fff;
+      }
+      #mapid {
+         height: 100vh;
+      }
+
+      .card {
+        font-size: 0.9em;
+        border-radius: 0;
+        background-color: #fff;
+        border-bottom-width: 0;
+        transition: all ease-in 0.2s;
+      }
+      .card:last-child {
+        border-bottom-width: 1px;
+      }
+      .card:hover {
+        background-color: #f9f9f9;
+      }
+      .card-img {
+        width: auto;
+        border-radius: calc(0.25rem - 0px);
+        margin-top: 10px;
+        /* margin: 10px 10px 10px 0; */
+      }
+    </style>
+
+    <!-- Global JS -->
+    {{ script('js/animate-in') }}
+
+  </head>
+<body>
+
+  <div class="container-fluid h-100" style="padding: 0">
+
+      @include('partials.navbar-guest')
+
+    <div class="row no-gutters justify-content-center h-100">
+
+      <div class="col-3 hidden-md-down" id="yellow">
+        <div class="container py-2" style="background-color: #eee">
+
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search jobs/rooms">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        @each(user in [1,2,3])
+        <div class="card mb-0" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Job Title ....</h5>
+                <p class="card-text">Dublin St....</p>
+                @each(user in [1,2,3])
+                <i class="fa fa-star"></i>
+                @endeach
+                @each(user in [1,2])
+                <i class="fa fa-star-o"></i>
+                @endeach
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img src="https://via.placeholder.com/115" class="card-img" alt="...">
+            </div>
+          </div>
+        </div>
+        @endeach
+
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
+        <div id="mapid"></div>
+      </div>
+
+    </div>
+  </div>
+
+    <!-- JavaScript dependencies -->
+    {{ script('https://code.jquery.com/jquery-3.3.1.min.js') }}
+    {{ script('https://unpkg.com/leaflet@1.4.0/dist/leaflet.js') }}
+    {{ script('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js') }}
+    {{ script('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js') }}
+
+    <!-- Script: Smooth scrolling between anchors in the same page -->
+    {{ script('js/smooth-scroll.js') }}
+    {{ script('js/listings.js') }}
+
+  </body>
+</html>

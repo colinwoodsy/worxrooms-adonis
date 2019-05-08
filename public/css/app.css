@@ -3,6 +3,9 @@ body {
   /* background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(217,243,249,1) 100%);
   background-repeat: no-repeat; */
 }
+.app-container {
+  height: 100%;
+}
 
 /* bootstrap overrides */
 .card {

@@ -1,0 +1,64 @@
+@layout('layouts/base')
+
+@section('head-title-keywords')
+<meta name="description" content="Worxrooms - Host Room" />
+<meta name="keywords" content="Worxrooms, Host Room" />
+<title>WorXrooms - Host Room </title>
+@endsection
+
+@section('page-css')
+{{ style('css/pages/home') }}
+<style type="text/css">
+h1 {
+  font-size: 75px;
+}
+
+.card {
+  box-shadow: 0 0 6px 1px rgba(0,0,0,0.1);
+  color: #111;
+}
+body .carousel .carousel-caption {
+  padding-top: 120px;
+  padding-bottom: 50px;
+  top: 0px;
+  bottom: 0px;
+  background: linear-gradient(rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%);
+}
+</style>
+@endsection
+
+
+@section('page-js')
+{{ script('js/navbar-ontop') }}
+@endsection
+
+!@section('navbar')
+
+@section('content')
+
+
+<!--Carousel Wrapper-->
+<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+    <!--First slide-->
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(29).jpg"
+        alt="Host a Room">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="container">
+          <h2>Host a Room</h2>
+          <p>Host a room for jobseekers and earn income</p>
+          <p>Sign Up and list your room now.</p>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+
+        </div>
+      </div>
+    </div>
+    <!--/First slide-->
+  </div>
+  <!--/.Slides-->
+</div>
+<!--/.Carousel Wrapper-->
+
+@endsection
